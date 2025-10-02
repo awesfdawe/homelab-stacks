@@ -1,7 +1,7 @@
 services:
   mihomo:
     container_name: mihomo-newt
-    image: metacubex/mihomo:v1.19.13
+    image: metacubex/mihomo:v1.19.14
     restart: unless-stopped
     volumes:
       - ./data:/root/.config/mihomo
