@@ -1,0 +1,29 @@
+services:
+  minecraft:
+    container_name: minecraft
+    image: itzg/minecraft-server:2025.9.2-java21-graalvm
+    ports:
+      - '25566:25565'
+    volumes:
+      - ./data:/data
+    environment:
+      - EULA=TRUE
+      - VERSION=1.21.8
+      - MEMORY=6144M
+      - TZ=${TZ}
+      - DIFFICULTY=3
+      - SIMULATION_DISTANCE=14
+      - VIEW_DISTANCE=28
+      - SYNC_CHUNK_WRITES=false
+      - SPAWN_PROTECTION=0
+      - OPS=${ADMIN_UUID}
+      - ENABLE_WHITELIST=true
+      - WHITELIST=${ADMIN_UUID}
+      - TYPE=FABRIC
+      - PACKWIZ_URL=${PACKWIZ_URL}
+      - ENFORCE_SECURE_PROFILE=false
+      - ALLOW_FLIGHT=true
+      - JVM_XX_OPTS=${JVM_XX_OPTS}
+    stdin_open: true
+    stop_grace_period: 1m
+    tty: true

@@ -1,0 +1,11 @@
+services:
+  ddclient:
+    container_name: ddclient
+    image: lscr.io/linuxserver/ddclient:v4.0.0-ls208
+    restart: unless-stopped
+    volumes:
+      - ./data:/config
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}

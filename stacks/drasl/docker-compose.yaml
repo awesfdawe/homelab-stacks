@@ -1,0 +1,24 @@
+services:
+  drasl:
+    container_name: drasl
+    image: unmojang/drasl:3.3.0
+    volumes:
+      - ./data:/etc/drasl
+    networks:
+      - drasl
+
+  anubis:
+    container_name: anubis-drasl
+    image: ghcr.io/techarohq/anubis:v1.22.0
+    environment:
+      - TARGET=http://drasl:25585
+      - SERVE_ROBOTS_TXT=true
+    networks:
+      - drasl
+      - tunnel
+
+networks:
+  drasl:
+    driver: bridge
+  tunnel:
+    external: true
