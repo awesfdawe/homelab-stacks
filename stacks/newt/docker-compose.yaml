@@ -1,17 +1,4 @@
 services:
-  mihomo:
-    container_name: mihomo-newt
-    image: metacubex/mihomo:v1.19.14
-    restart: unless-stopped
-    volumes:
-      - ./data:/root/.config/mihomo
-    networks:
-      - tunnel
-    cap_add:
-      - NET_ADMIN
-    devices:
-      - /dev/net/tun:/dev/net/tun
-
   newt:
     container_name: newt
     image: fosrl/newt:1.5.2
@@ -20,8 +7,5 @@ services:
       - PANGOLIN_ENDPOINT=${PANGOLIN_ENDPOINT}
       - NEWT_ID=${NEWT_ID}
       - NEWT_SECRET=${NEWT_SECRET}
-    network_mode: service:mihomo
-
-networks:
-  tunnel:
-    external: true
+      - NO_CLOUD=true
+    network_mode: container:mihomo

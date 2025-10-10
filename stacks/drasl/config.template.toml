@@ -1,0 +1,14 @@
+Domain = "$DOMAIN"
+
+BaseURL = "https://$DOMAIN"
+StateDirectory = "/etc/drasl/"
+DefaultAdmins = ["$FIRST_ADMIN_USERNAME"]
+
+DefaultPreferredLanguage = "ru"
+
+[CreateNewPlayer]
+AllowChoosingUUID = true
+
+[RegistrationNewPlayer]
+Allow = true
+RequireInvite = true

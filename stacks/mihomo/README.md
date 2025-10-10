@@ -1,5 +1,5 @@
-# drasl
-https://github.com/Unmojang/Drasl
+# mihomo
+https://wiki.metacubex.one/ru/config/
 
 1. Заполнить .env по шаблону .env.example
 2. Отрендерить шаблон
@@ -7,5 +7,5 @@ https://github.com/Unmojang/Drasl
 set -o allexport
 . .env
 set +o allexport
-envsubst < ./config.template.toml > ./data/config.toml
+envsubst < ./config.template.yaml > ./data/config.yaml
 ```

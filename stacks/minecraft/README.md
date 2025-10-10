@@ -1,3 +1,4 @@
-https://github.com/itzg/docker-minecraft-server
+# minecraft
+https://docker-minecraft-server.readthedocs.io/en/latest/
 
-Java аргументы: https://github.com/Mukul1127/Minecraft-Java-Flags
+Рекомендуемые jvm аргументы: https://github.com/Mukul1127/Minecraft-Java-Flags
