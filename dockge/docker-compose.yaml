@@ -7,7 +7,7 @@ services:
       - '5001:5001'
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./data:/app/data
+      - /mnt/docker-volumes/dockge/data:/app/data
       - ${STACKS_FOLDER_PATH}:${STACKS_FOLDER_PATH}
     environment:
       - DOCKGE_STACKS_DIR=${STACKS_FOLDER_PATH}

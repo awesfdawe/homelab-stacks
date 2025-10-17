@@ -1,10 +1,9 @@
-Domain = "$DOMAIN"
-
-BaseURL = "https://$DOMAIN"
-StateDirectory = "/etc/drasl/"
+LogRequests = false
+DefaultPreferredLanguage = "ru"
 DefaultAdmins = ["$FIRST_ADMIN_USERNAME"]
 
-DefaultPreferredLanguage = "ru"
+Domain = "$DOMAIN"
+BaseURL = "https://$DOMAIN"
 
 [CreateNewPlayer]
 AllowChoosingUUID = true

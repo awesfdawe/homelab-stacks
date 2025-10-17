@@ -5,24 +5,24 @@ services:
     ports:
       - '25566:25565'
     volumes:
-      - ./data:/data
+      - /mnt/docker-volumes/minecraft/data:/data
     environment:
+      - TZ=Europe/Kaliningrad
       - EULA=TRUE
       - VERSION=1.21.8
-      - MEMORY=6144M
-      - TZ=${TZ}
-      - DIFFICULTY=3
-      - SIMULATION_DISTANCE=14
-      - VIEW_DISTANCE=28
-      - SYNC_CHUNK_WRITES=false
-      - SPAWN_PROTECTION=0
-      - OPS=${ADMIN_UUID}
-      - ENABLE_WHITELIST=true
-      - WHITELIST=${ADMIN_UUID}
       - TYPE=FABRIC
-      - PACKWIZ_URL=${PACKWIZ_URL}
+      - MEMORY=6144M
+      - DIFFICULTY=3
+      - ENABLE_WHITELIST=true
       - ENFORCE_SECURE_PROFILE=false
       - ALLOW_FLIGHT=true
+      - SYNC_CHUNK_WRITES=false
+      - SIMULATION_DISTANCE=14
+      - VIEW_DISTANCE=28
+      - SPAWN_PROTECTION=0
+      - OPS=${ADMIN_UUID}
+      - WHITELIST=${ADMIN_UUID}
+      - PACKWIZ_URL=${PACKWIZ_URL}
       - JVM_XX_OPTS=${JVM_XX_OPTS}
     stdin_open: true
     stop_grace_period: 1m

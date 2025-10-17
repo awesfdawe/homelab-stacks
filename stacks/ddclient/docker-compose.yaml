@@ -4,8 +4,8 @@ services:
     image: lscr.io/linuxserver/ddclient:v4.0.0-ls208
     restart: unless-stopped
     volumes:
-      - ./data:/config
+      - /mnt/docker-volumes/ddclient/config/ddclient.conf:/config/ddclient.conf
     environment:
-      - PUID=${PUID}
-      - PGID=${PGID}
-      - TZ=${TZ}
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Kaliningrad

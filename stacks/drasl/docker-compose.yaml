@@ -3,7 +3,8 @@ services:
     container_name: drasl
     image: unmojang/drasl:3.3.0
     volumes:
-      - ./data:/etc/drasl
+      - /mnt/docker-volumes/drasl/config/config.toml:/etc/drasl/config.toml
+      - /mnt/docker-volumes/drasl/data:/var/lib/drasl
     networks:
       - drasl
 
@@ -13,6 +14,7 @@ services:
     environment:
       - TARGET=http://drasl:25585
       - SERVE_ROBOTS_TXT=true
+      - SLOG_LEVEL=ERROR
     networks:
       - drasl
       - tunnel
