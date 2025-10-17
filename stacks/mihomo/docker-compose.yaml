@@ -1,7 +1,7 @@
 services:
   mihomo:
     container_name: mihomo
-    image: metacubex/mihomo:v1.19.14
+    image: metacubex/mihomo:v1.19.15
     restart: unless-stopped
     volumes:
       - /mnt/docker-volumes/mihomo/config/config.yaml:/root/.config/mihomo/config.yaml
