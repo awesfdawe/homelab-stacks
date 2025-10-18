@@ -10,6 +10,12 @@
 
 # Пометки
 
+```bash
+# Создайте папку для конфигурации и данных drasl
+mkdir /mnt/docker-volumes/drasl/config -p
+mkdir /mnt/docker-volumes/drasl/data -p
+```
+
 Шаблон подразумевает что данные будут идти по https.
 
 1. Настройте файл `.env` с вашими личными секретами:
@@ -22,10 +28,6 @@ FIRST_ADMIN_USERNAME=playername
 2. Отрендерите шаблон:
 
 ```bash
-# Создайте папку для конфигурации и данных drasl
-mkdir /mnt/docker-volumes/drasl/config -p
-mkdir /mnt/docker-volumes/drasl/data -p
-# Отрендерите шаблон
 set -o allexport
 . .env
 set +o allexport

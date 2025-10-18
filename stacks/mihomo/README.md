@@ -9,6 +9,11 @@
 
 # Пометки
 
+```bash
+# Создайте папку для конфигурации mihomo
+mkdir /mnt/docker-volumes/mihomo/config -p
+```
+
 Шаблон подразумевает наличия ссылки [подписки](https://wiki.metacubex.one/ru/config/proxy-providers/content/#__tabbed_1_3)
 
 1. Настройте файл `.env` с вашими личными секретами:
@@ -20,9 +25,6 @@ BASE64_PROXY_SUBSCRIPTION_URL=https://example.com/base64_subscription_path/etc/e
 2. Отрендерите шаблон:
 
 ```bash
-# Создайте папку для конфигурации mihomo
-mkdir /mnt/docker-volumes/mihomo/config -p
-# Отрендерите шаблон
 set -o allexport
 . .env
 set +o allexport

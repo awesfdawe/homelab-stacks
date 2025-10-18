@@ -15,6 +15,11 @@ https://docs.linuxserver.io/images/docker-ddclient/
 
 # Пометки
 
+```bash
+# Создайте папку для конфигурации ddclient
+mkdir /mnt/docker-volumes/ddclient/config -p
+```
+
 Шаблон подразумевает наличия домена на Cloudflare, API ключа с доступом к DNS:EDIT для нужной вам зоны.
 
 1. Настройте файл `.env` с вашими личными секретами:
@@ -28,9 +33,6 @@ DOMAIN=ddns.example.com
 2. Отрендерите шаблон:
 
 ```bash
-# Создайте папку для конфигурации ddclient
-mkdir /mnt/docker-volumes/ddclient/config -p
-# Отрендерите шаблон
 set -o allexport
 . .env
 set +o allexport
