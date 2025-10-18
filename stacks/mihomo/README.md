@@ -7,12 +7,17 @@
 - https://github.com/MetaCubeX/mihomo
 - https://wiki.metacubex.one/ru/config/
 
-# Пометки
+# docker volumes mapping
+
+Создайте папку для конфига mihomo контейнера.
 
 ```bash
-# Создайте папку для конфигурации mihomo
 mkdir /mnt/docker-volumes/mihomo/config -p
+sudo chown 1000:1000 /mnt/docker-volumes/mihomo/ -R
+sudo chmod 775 /mnt/docker-volumes/mihomo/ -R
 ```
+
+# Пометки
 
 Шаблон подразумевает наличия ссылки [подписки](https://wiki.metacubex.one/ru/config/proxy-providers/content/#__tabbed_1_3)
 

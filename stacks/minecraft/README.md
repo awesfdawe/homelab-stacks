@@ -8,12 +8,17 @@
 - https://github.com/itzg/docker-minecraft-server
 - https://github.com/Mukul1127/Minecraft-Java-Flags
 
-# Пометки
+# docker volumes mapping
+
+Создайте папку для данных minecraft контейнера.
 
 ```bash
-# Создайте папку для конфигурации и данных minecraft
 mkdir /mnt/docker-volumes/minecraft/data -p
+sudo chown 1000:1000 /mnt/docker-volumes/minecraft/ -R
+sudo chmod 775 /mnt/docker-volumes/minecraft/ -R
 ```
+
+# Пометки
 
 Настройте файл `.env` с вашими личными секретами и запустите стек:
 

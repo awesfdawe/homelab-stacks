@@ -1,9 +1,4 @@
 # ddclient
-https://docs.linuxserver.io/images/docker-ddclient/
-
-В папке data создать ddclient.conf и заполнить по документации [ddclient.net](https://ddclient.net/), пример с cloudflare лежит в ddclient.example.conf
-
-# ddclient
 
 Контейнер DDNS.
 
@@ -13,14 +8,19 @@ https://docs.linuxserver.io/images/docker-ddclient/
 - https://github.com/ddclient/ddclient
 - https://ddclient.net/
 
-# Пометки
+# docker volumes mapping
+
+Создайте папку для конфига ddclient контейнера.
 
 ```bash
-# Создайте папку для конфигурации ddclient
 mkdir /mnt/docker-volumes/ddclient/config -p
+sudo chown 1000:1000 /mnt/docker-volumes/ddclient/ -R
+sudo chmod 775 /mnt/docker-volumes/ddclient/ -R
 ```
 
-Шаблон подразумевает наличия домена на Cloudflare, API ключа с доступом к DNS:EDIT для нужной вам зоны.
+# Пометки
+
+Шаблон подразумевает наличие домена на Cloudflare, API ключа с доступом к DNS:Edit для нужной вам зоны.
 
 1. Настройте файл `.env` с вашими личными секретами:
 

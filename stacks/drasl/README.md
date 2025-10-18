@@ -8,13 +8,17 @@
 - https://github.com/unmojang/drasl/blob/master/doc/configuration.md
 - https://github.com/unmojang/FjordLauncher
 
-# Пометки
+# docker volumes mapping
+
+Создайте папку для конфига и данных drasl контейнера.
 
 ```bash
-# Создайте папку для конфигурации и данных drasl
-mkdir /mnt/docker-volumes/drasl/config -p
-mkdir /mnt/docker-volumes/drasl/data -p
+mkdir /mnt/docker-volumes/drasl/{config,data} -p
+sudo chown 1000:1000 /mnt/docker-volumes/drasl/ -R
+sudo chmod 775 /mnt/docker-volumes/drasl/ -R
 ```
+
+# Пометки
 
 Шаблон подразумевает что данные будут идти по https.
 
