@@ -33,7 +33,7 @@ services:
 
   qbittorrent:
     container_name: arr-stack-qbittorrent
-    image: lscr.io/linuxserver/qbittorrent:5.1.2
+    image: lscr.io/linuxserver/qbittorrent:20.04.1
     restart: unless-stopped
     ports:
       - 6881:6881/udp
