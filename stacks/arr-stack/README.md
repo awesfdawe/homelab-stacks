@@ -13,6 +13,8 @@
     - Используется для фильмов.
   - Recyclarr
     - Используется для синхронизаций настроек Sonarr и Radarr с trash guides.
+  - Jellyseer
+    - Менеджер запросов для sonarr и radarr.
 
 # Референсы
 
@@ -22,6 +24,7 @@
 - https://github.com/Sonarr/Sonarr
 - https://github.com/Radarr/Radarr
 - https://github.com/recyclarr/recyclarr
+- https://github.com/seerr-team/seerr
 - https://trash-guides.info/
 
 # docker volumes mapping
@@ -30,7 +33,7 @@
 
 ```bash
 sudo mkdir /mnt/docker-volumes/arr-stack/media/{movies,tv-shows,downloads} -p
-sudo mkdir /mnt/docker-volumes/arr-stack/{prowlarr,qbittorrent,sonarr,radarr,recyclarr}/config -p
+sudo mkdir /mnt/docker-volumes/arr-stack/{prowlarr,qbittorrent,sonarr,radarr,recyclarr,jellyseerr}/config -p
 sudo chown 1000:1000 /mnt/docker-volumes/arr-stack/ -R
 sudo chmod 775 /mnt/docker-volumes/arr-stack/ -R
 ```
@@ -47,6 +50,7 @@ PROWLARR_DOMAIN=prowlarr.internal.example.com
 QBITTORRENT_DOMAIN=qbittorrent.internal.example.com
 SONARR_DOMAIN=sonarr.internal.example.com
 RADARR_DOMAIN=radarr.internal.example.com
+JELLYSEER_DOMAIN=jellyseer.internal.example.com
 ```
 
 # Первичная настройка
@@ -97,3 +101,5 @@ sudo docker compose exec -it recyclarr recyclarr sync
 - https://trash-guides.info/Radarr/Radarr-recommended-naming-scheme/
 
 Unmonitor Deleted Episodes = true
+
+12. Настроить jellyseer, включить reverse proxy support.

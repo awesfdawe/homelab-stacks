@@ -103,6 +103,23 @@ services:
     networks:
       - arr-stack
 
+  jellyseerr:
+    container_name: arr-stack-jellyseerr
+    image: ghcr.io/fallenbagel/jellyseerr:2.7.3
+    restart: unless-stopped
+    volumes:
+      - /mnt/docker-volumes/arr-stack/jellyseerr/config:/app/config
+    environment:
+      - TZ=Europe/Kaliningrad
+      - LOG_LEVEL=error
+      - PORT=5055
+    networks:
+      - arr-stack
+      - proxy
+    labels:
+      - caddy=${JELLYSEER_DOMAIN}
+      - caddy.reverse_proxy={{upstreams http 5055}}
+
 networks:
   arr-stack:
     driver: bridge
