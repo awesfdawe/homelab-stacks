@@ -1,11 +1,17 @@
 # drasl
 
-Контейнер альтернативного сервера авторизации для Minecraft.
+Стак содержит следующие сервисы:
+  - Drasl
+    - Альтернативный сервер авторизации для Minecraft.
+  - Anubis
+    - Защита от ботов.
 
 # Референсы
 
 - https://github.com/Unmojang/Drasl
 - https://github.com/unmojang/drasl/blob/master/doc/configuration.md
+- https://github.com/TecharoHQ/anubis
+- https://anubis.techaro.lol/docs/category/configuration/
 - https://github.com/unmojang/FjordLauncher
 
 # docker volumes mapping

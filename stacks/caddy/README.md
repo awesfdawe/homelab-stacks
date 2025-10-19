@@ -28,5 +28,5 @@ sudo chmod 775 /mnt/docker-volumes/caddy/ -R
 
 ```env
 API_KEY=dsadsadsajdajjdajsdajdasjsda
-DOMAIN=i.example.com
+DOMAIN=internal.example.com
 ```
