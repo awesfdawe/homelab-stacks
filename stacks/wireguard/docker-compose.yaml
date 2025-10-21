@@ -1,0 +1,27 @@
+services:
+  wireguard:
+    container_name: wireguard
+    image: lscr.io/linuxserver/wireguard:1.0.20250521
+    restart: unless-stopped
+    ports:
+      - 51820:51820/udp
+    volumes:
+      - /mnt/docker-volumes/wireguard/config:/config
+      - /lib/modules:/lib/modules
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Kaliningrad
+      - SERVERURL=${DDNS}
+      - SERVERPORT=51820
+      - PEERS=1
+      - PEERDNS=auto
+      - INTERNAL_SUBNET=10.13.13.0
+      - ALLOWEDIPS=0.0.0.0/0
+      - PERSISTENTKEEPALIVE_PEERS=all
+      - LOG_CONFS=true
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
