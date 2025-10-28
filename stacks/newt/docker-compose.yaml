@@ -1,7 +1,7 @@
 services:
   newt:
     container_name: newt
-    image: fosrl/newt:1.5.2
+    image: fosrl/newt:1.6.0
     restart: unless-stopped
     environment:
       - PANGOLIN_ENDPOINT=${PANGOLIN_ENDPOINT}
