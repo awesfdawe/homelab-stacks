@@ -1,7 +1,7 @@
 services:
   prowlarr:
     container_name: arr-stack-prowlarr
-    image: linuxserver/prowlarr:2.0.5
+    image: linuxserver/prowlarr:2.3.0
     restart: unless-stopped
     volumes:
       - /mnt/docker-volumes/arr-stack/prowlarr/config:/config
