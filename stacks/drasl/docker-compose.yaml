@@ -1,7 +1,7 @@
 services:
   drasl:
     container_name: drasl
-    image: unmojang/drasl:3.3.0
+    image: unmojang/drasl:3.4.0
     volumes:
       - /mnt/docker-volumes/drasl/config/config.toml:/etc/drasl/config.toml
       - /mnt/docker-volumes/drasl/data:/var/lib/drasl
