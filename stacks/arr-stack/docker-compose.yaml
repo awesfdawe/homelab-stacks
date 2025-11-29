@@ -19,7 +19,7 @@ services:
 
   flaresolverr:
     container_name: arr-stack-flaresolverr
-    image: flaresolverr/flaresolverr:v3.4.2
+    image: flaresolverr/flaresolverr:v3.4.6
     restart: unless-stopped
     environment:
       - LOG_LEVEL=error
