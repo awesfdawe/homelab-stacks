@@ -1,8 +1,6 @@
 # newt
 
 Контейнер для подключения к туннелю [Pangolin](https://docs.digpangolin.com/).
-Контейнер обёрнут в прокси-контейнер из-за блокировки туннелей WireGuard в России, поэтому контейнер mihomo должен быть запущен перед запуском этого композа.
-
 # Референсы
 
 - https://docs.digpangolin.com/manage/sites/install-site#docker-installation

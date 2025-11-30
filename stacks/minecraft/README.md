@@ -25,5 +25,6 @@ sudo chmod 775 /mnt/docker-volumes/minecraft/ -R
 ```env
 ADMIN_UUID=sadadsda6-7ads-4ef6-a675-123123123
 PACKWIZ_URL=https://raw.githubusercontent.com/awesfdawe/minecraft-modpack/refs/heads/main/pack.toml
-JVM_XX_OPTS='-XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions .......'
+DRASL_URL=https://drasl.example.com
+JVM_XX_OPTIMIZATION_OPTS=-XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions .......
 ```

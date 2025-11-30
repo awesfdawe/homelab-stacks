@@ -8,4 +8,9 @@ services:
       - NEWT_ID=${NEWT_ID}
       - NEWT_SECRET=${NEWT_SECRET}
       - NO_CLOUD=true
-    network_mode: container:mihomo
+    networks:
+      - tunnel
+
+networks:
+  tunnel:
+    external: true
