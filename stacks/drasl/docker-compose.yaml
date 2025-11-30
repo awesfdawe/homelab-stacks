@@ -10,7 +10,7 @@ services:
 
   anubis:
     container_name: anubis-drasl
-    image: ghcr.io/techarohq/anubis:v1.22.0
+    image: ghcr.io/techarohq/anubis:v1.23.1
     environment:
       - TARGET=http://drasl:25585
       - SERVE_ROBOTS_TXT=true
