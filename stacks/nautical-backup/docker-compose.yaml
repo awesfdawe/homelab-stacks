@@ -1,0 +1,14 @@
+services:
+  nautical-backup:
+    container_name: nautical-backup
+    image: minituff/nautical-backup:2.14.25
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/docker-volumes/nautical-backup/config:/config
+      - /mnt/docker-volumes:/app/source
+      - ${BACKUPS_FOLDER}:/app/destination
+    environment:
+      - TZ=Europe/Kaliningrad
+      - CRON_SCHEDULE=0 5 * * 0
+      - REQUIRE_LABEL=true
+      - USE_DEST_DATE_FOLDER=true

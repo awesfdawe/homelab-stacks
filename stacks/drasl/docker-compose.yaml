@@ -7,6 +7,8 @@ services:
       - /mnt/docker-volumes/drasl/data:/var/lib/drasl
     networks:
       - drasl
+    labels:
+      - nautical-backup.enable=true
 
   anubis:
     container_name: anubis-drasl

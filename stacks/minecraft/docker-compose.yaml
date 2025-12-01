@@ -24,6 +24,8 @@ services:
       - WHITELIST=${ADMIN_UUID}
       - PACKWIZ_URL=${PACKWIZ_URL}
       - JVM_XX_OPTS=-Dminecraft.api.env=custom -Dminecraft.api.auth.host=${DRASL_URL}/auth -Dminecraft.api.account.host=${DRASL_URL}/account -Dminecraft.api.profiles.host=${DRASL_URL}/account -Dminecraft.api.session.host=${DRASL_URL}/session -Dminecraft.api.services.host=${DRASL_URL}/services ${JVM_XX_OPTIMIZATION_OPTS:-}
+    labels:
+      - nautical-backup.enable=true
     stdin_open: true
     stop_grace_period: 1m
     tty: true
